@@ -1,0 +1,11 @@
+services:
+  keyword_search:
+    build: ./keyword_search
+    ports:
+      - "8000:80"
+    volumes:
+      - keyword_data:/app/data
+
+
+volumes:
+  keyword_data:
