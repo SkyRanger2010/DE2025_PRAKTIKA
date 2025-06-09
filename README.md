@@ -169,7 +169,7 @@ uvicorn app.main:app --reload
 
 ## 📄 Лицензия
 
-MIT License
+Apache License Version 2.0
 
 ---
 
