@@ -136,8 +136,8 @@ uvicorn app.main:app --reload
 
 ## 🤝 Авторы и вклад
 
-- [Ваше имя или команда](https://github.com/your-profile)
-- PR и идеи приветствуются!
+- [Антон Дубровин](https://github.com/AntonDubrovin)
+- [Василий Сатанцев](https://github.com/SkyRanger2010)
 
 ---
 
