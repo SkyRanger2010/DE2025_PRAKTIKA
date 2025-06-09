@@ -10,14 +10,7 @@ def get_users_by_keywords(db: Session, keywords: set[str], start_idx: int, end_i
         models.UserIn.biography,
         models.UserIn.sex,
         models.UserIn.external_url,
-        models.UserIn.account_type,
-        models.UserIn.is_private,
-        models.UserIn.avatar,
-        models.UserIn.is_verified,
-        models.UserIn.follower_count,
-        models.UserIn.following_count,
-        models.UserIn.media_count,
-        models.UserIn.last_time
+        models.UserIn.account_type
     ]
 
     conditions = []
@@ -25,10 +18,11 @@ def get_users_by_keywords(db: Session, keywords: set[str], start_idx: int, end_i
         conditions_to_search_by_keyword = [func.lower(db_field).contains(func.lower(keyword)) for db_field in db_fields]
         conditions.append(or_(*conditions_to_search_by_keyword))
 
-    return (
+    return  (
         db.query(models.UserIn)
         .filter(or_(*conditions))
         .offset(start_idx)
         .limit(end_idx - start_idx)
         .all()
     )
+

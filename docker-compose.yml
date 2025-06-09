@@ -1,11 +1,12 @@
 services:
   keyword_search:
-    build: ./keyword_search
+    build: .
     ports:
       - "8000:80"
     volumes:
-      - keyword_data:/app/data
-
-
-volumes:
-  keyword_data:
+      - ./data:/app/data
+  streamlit_app:
+    build:
+      context: ./streamlit
+    ports:
+      - "8501:8501"
