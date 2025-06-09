@@ -147,8 +147,8 @@ uvicorn app.main:app --reload
 
 ## 🤝 Авторы и вклад
 
-- [Антон Дубровин](https://github.com/AntonDubrovin)
-- [Василий Сатанцев](https://github.com/SkyRanger2010)
+- [Антон Дубровин](https://github.com/AntonDubrovin) - Backend
+- [Василий Сатанцев](https://github.com/SkyRanger2010) - Frontend
 
 ---
 
